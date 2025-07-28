@@ -11,5 +11,24 @@ function revealOnScroll() {
   }
 }
 
+// Particle effect configuration
+window.addEventListener("load", () => {
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: "#ffcc00" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5, random: true },
+      size: { value: 3, random: true },
+      line_linked: { enable: false },
+      move: { enable: true, speed: 2, direction: "none", random: true }
+    },
+    interactivity: {
+      events: { onhover: { enable: true, mode: "repulse" } },
+      modes: { repulse: { distance: 100, duration: 0.4 } }
+    }
+  });
+  revealOnScroll();
+});
+
 window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
